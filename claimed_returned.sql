@@ -18,7 +18,7 @@ returns table(
 	claim_note text,
 	loan_id uuid,
 	patron_barcode text,
-	user_id uuid)
+	user_id text)
 AS $$
 SELECT
 	(i.jsonb -> 'status' ->> 'date')::DATE as claimed_date,
