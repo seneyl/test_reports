@@ -1,3 +1,24 @@
+–metdb:function claimed returned
+
+
+drop function if exists claimed_returned
+
+
+create function claimed_returned(
+	item_location text)
+Returns table(
+	claimed_date timestamptz
+	item_barcode text
+	library text
+	location text
+	call_number text
+	copy text
+	vol text
+	claim_note text
+	loan_id uuid
+	patron_barcode text
+	user_id uuid)
+AS $$
 SELECT
 	(i.jsonb -> 'status' ->> 'date')::DATE as claimed_date,
 	i.jsonb ->> 'barcode' as item_barcode,
@@ -20,4 +41,8 @@ where i.jsonb -> 'status' ->> 'name' = 'Claimed returned'
 	AND l.jsonb ->> 'itemStatus' = 'Claimed returned'
 	AND l.jsonb ->> 'action' = 'claimedReturned'
 	AND lt.”name” ~* item_location,
-ORDER BY claimed_date asc;
+ORDER BY claimed_date asc
+$$
+language sql
+stable
+parallel safe;
