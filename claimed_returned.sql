@@ -24,10 +24,10 @@ SELECT
 	(i.jsonb -> 'status' ->> 'date')::DATE as claimed_date,
 	i.jsonb ->> 'barcode' as item_barcode,
 	lt2."name" as library,
-	lt."name"  as location,
+	lt."name"  as item_location,
 	holdings."call_number",
 	i.jsonb ->> 'copyNumber' AS copy,
-	i.jsonb ->> 'volume' AS vol,
+	i.jsonb ->> 'volume' AS volume,
 	l.jsonb ->> 'actionComment' as claim_note,
 	l.jsonb ->> 'id' AS loan_id,
 	U.barcode as patron_barcode,
@@ -41,7 +41,7 @@ LEFT JOIN folio_inventory.holdings_record__t as holdings on holdings.id = i.hold
 where i.jsonb -> 'status' ->> 'name' = 'Claimed returned'
 	AND l.jsonb ->> 'itemStatus' = 'Claimed returned'
 	AND l.jsonb ->> 'action' = 'claimedReturned'
-	AND lt.”name” ~* item_location,
+	AND lt.”name” '%' || item_location || '%'
 ORDER BY claimed_date asc
 $$
 language sql
