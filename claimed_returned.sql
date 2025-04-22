@@ -1,22 +1,23 @@
-–metdb:function claimed returned
+--metadb:function claimed_returned
 
+-- Report pulls a list of items with the status of claimed returned, 
+-- with the ability to filter by library.
 
-drop function if exists claimed_returned
+DROP FUNCTION IF EXISTS claimed_returned;
 
-
-create function claimed_returned(
+CREATE FUNCTION claimed_returned(
 	item_location text)
-Returns table(
-	claimed_date timestamptz
-	item_barcode text
-	library text
-	location text
-	call_number text
-	copy text
-	vol text
-	claim_note text
-	loan_id uuid
-	patron_barcode text
+returns table(
+	claimed_date timestampz,
+	item_barcode text,
+	library text,
+	location text,
+	call_number text,
+	copy text,
+	vol text,
+	claim_note text,
+	loan_id uuid,
+	patron_barcode text,
 	user_id uuid)
 AS $$
 SELECT
