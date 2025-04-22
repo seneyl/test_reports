@@ -8,7 +8,7 @@ DROP FUNCTION IF EXISTS claimed_returned;
 CREATE FUNCTION claimed_returned(
 	item_location text)
 returns table(
-	claimed_date timestampz,
+	claimed_date timestamptz,
 	item_barcode text,
 	library text,
 	location text,
