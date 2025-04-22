@@ -4,7 +4,7 @@
     "instructions": "Enter a FOLIO location name to return a list for a specific location. To run a list of all items marked ‘claimed returned’, leave the field blank.",
     "parameters": [
  {
-            "name": “item_location”,
+            "name": "item_barcode"
             "displayName": "FOLIO location name",
             "type": "text",
             "required": false
