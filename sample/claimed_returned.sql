@@ -6,8 +6,9 @@
 DROP FUNCTION IF EXISTS claimed_returned;
 
 CREATE FUNCTION claimed_returned(
-	item_location text)
-returns table(
+	/* Enter a FOLIO item locations */
+	item_location text DEFAULT *)
+RETURNS TABLE(
 	claimed_date timestamptz,
 	item_barcode text,
 	library text,
