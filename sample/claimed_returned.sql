@@ -17,7 +17,7 @@ RETURNS TABLE(
 	copy text,
 	volume text,
 	claim_note text,
-	loan_id uuid,
+	loan_id text,
 	patron_barcode text,
 	user_id text)
 AS $$
