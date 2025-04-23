@@ -12,7 +12,7 @@ RETURNS TABLE(
 	claimed_date timestamptz,
 	item_barcode text,
 	library text,
-	location text,
+	item_location text,
 	call_number text,
 	copy text,
 	vol text,
