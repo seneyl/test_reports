@@ -15,7 +15,7 @@ RETURNS TABLE(
 	item_location text,
 	call_number text,
 	copy text,
-	vol text,
+	volume text,
 	claim_note text,
 	loan_id uuid,
 	patron_barcode text,
