@@ -31,7 +31,7 @@ SELECT
 	i.jsonb ->> 'volume' AS volume,
 	l.jsonb ->> 'actionComment' as claim_note,
 	l.jsonb ->> 'id' AS loan_id,
-	U.barcode as patron_barcode,
+	u.barcode as patron_barcode,
 	l.jsonb ->> 'userId' AS user_id
 FROM folio_circulation.loan l
 LEFT JOIN folio_inventory.item i on i.id = (l.jsonb ->> 'itemId')::uuid
@@ -42,7 +42,7 @@ LEFT JOIN folio_inventory.holdings_record__t as holdings on holdings.id = i.hold
 where i.jsonb -> 'status' ->> 'name' = 'Claimed returned'
 	AND l.jsonb ->> 'itemStatus' = 'Claimed returned'
 	AND l.jsonb ->> 'action' = 'claimedReturned'
-	AND lt."name" ilike ('%' ,item_location, '%')
+	AND lt."name" ilike concat('%' ,item_location, '%')
 ORDER BY claimed_date asc
 $$
 language sql
