@@ -9,7 +9,7 @@ CREATE FUNCTION claimed_returned(
 	/* Enter a FOLIO item locations */
 	item_location text)
 RETURNS TABLE(
-	claimed_date timestamptz,
+	claimed_date date,
 	item_barcode text,
 	library text,
 	item_location text,
@@ -42,7 +42,8 @@ LEFT JOIN folio_inventory.holdings_record__t as holdings on holdings.id = i.hold
 where i.jsonb -> 'status' ->> 'name' = 'Claimed returned'
 	AND l.jsonb ->> 'itemStatus' = 'Claimed returned'
 	AND l.jsonb ->> 'action' = 'claimedReturned'
-ORDER BY claimed_date asc
+	AND lt."name" ilike concat('%',item_location,'%')
+ORDER BY claimed_date asc 
 $$
 language sql
 stable
