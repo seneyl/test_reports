@@ -42,7 +42,7 @@ LEFT JOIN folio_inventory.holdings_record__t as holdings on holdings.id = i.hold
 where i.jsonb -> 'status' ->> 'name' = 'Claimed returned'
 	AND l.jsonb ->> 'itemStatus' = 'Claimed returned'
 	AND l.jsonb ->> 'action' = 'claimedReturned'
-	AND lt."name" ILIKE '%' || item_location || '%'
+	AND lt."name" ilike ('%' ,item_location, '%')
 ORDER BY claimed_date asc
 $$
 language sql
