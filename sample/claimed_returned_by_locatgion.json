@@ -1,5 +1,5 @@
 {
-    "displayName": "Claimed Returned",
+    "displayName": "Claimed Returned By Location",
     "description": "This report can be used to identify a list of items that have been marked as ‘claimed returned’ from a specific location. ",
     "instructions": "Enter a FOLIO location name to return a list for a specific location.",
     "parameters": [
