@@ -1,11 +1,11 @@
---metadb:function claimed_returned
+--metadb:function claimed_returned_by_location
 
 -- Report pulls a list of items with the status of claimed returned, 
 -- with the ability to filter by library.
 
-DROP FUNCTION IF EXISTS claimed_returned;
+DROP FUNCTION IF EXISTS claimed_returned_by_location;
 
-CREATE FUNCTION claimed_returned(
+CREATE FUNCTION claimed_returned_by_location(
 	/* Enter a FOLIO item locations */
 	item_location text)
 RETURNS TABLE(
