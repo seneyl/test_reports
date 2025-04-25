@@ -1,7 +1,7 @@
 {
     "displayName": "Claimed Returned By Location",
     "description": "This report can be used to identify a list of items that have been marked as ‘claimed returned’ from a specific location. ",
-    "instructions": "In the search box enter some, or all of a FOLIO Location Name and click submit. This will return details about each individual item that has been marked as 'claimed returned' and will provide the loan id if it is necessary to investigate further. Patron details are not included.",
+    "instructions": "In the search box enter some, or all, of a FOLIO Location Name and click submit. This will return details about each individual item that has been marked as 'claimed returned' in the specified location and will provide the loan id if it is necessary to investigate further. Patron details are not included.",
     "parameters": [
  {
             "name": "item_location",
