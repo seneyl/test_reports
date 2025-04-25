@@ -17,9 +17,8 @@ RETURNS TABLE(
 	copy text,
 	volume text,
 	claim_note text,
-	loan_id text,
-	patron_barcode text,
-	user_id text)
+	loan_id text
+	)
 AS $$
 SELECT
 	(i.jsonb -> 'status' ->> 'date')::DATE as claimed_date,
@@ -30,9 +29,7 @@ SELECT
 	i.jsonb ->> 'copyNumber' AS copy,
 	i.jsonb ->> 'volume' AS volume,
 	l.jsonb ->> 'actionComment' as claim_note,
-	l.jsonb ->> 'id' AS loan_id,
-	u.barcode as patron_barcode,
-	l.jsonb ->> 'userId' AS user_id
+	l.jsonb ->> 'id' AS loan_id
 FROM folio_circulation.loan l
 LEFT JOIN folio_inventory.item i on i.id = (l.jsonb ->> 'itemId')::uuid
 LEFT JOIN folio_users.users__t as u on u.id = (l.jsonb ->> 'userId')::uuid
