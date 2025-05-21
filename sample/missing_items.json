@@ -4,18 +4,10 @@
     "instructions": "Select location and click Submit button to run current report.",
     "parameters": [
 	{ 
-            "name": “item_location”,
+                "name": "item_location",
             "displayName": "FOLIO location name",
             "type": "text",
             "required": true
-            "controlled.options": {
-                  "name": "locations",
-                  "wsapiPath": "locations",
-                  "sortSpec": "name",
-                  "limit": 3000,
-                  "resultPath": "locations",
-                  "queryField": "id",
-                  "displaySpec": "{{name}} ({{code}})"
 
 
         }
