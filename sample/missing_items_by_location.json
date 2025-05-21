@@ -1,6 +1,6 @@
 {
-    "displayName": "Missing Items",
-    "description": "Generates a list of books with the item status 'missing'.",
+    "displayName": "Missing Items by Location",
+    "description": "Generates a list of books with the item status 'missing' in the location selected by the user.",
     "instructions": "Select location and click Submit button to run current report.",
     "parameters": [
 	{ 
