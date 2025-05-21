@@ -8,7 +8,7 @@
             "displayName": "FOLIO location name",
             "type": "text",
             "required": true
-	    "controlled.options": {
+	    "controlled.fetchOptions": {
             	"name": "locations",
            	"wsapiPath": "locations",
             	"sortSpec": "name",
