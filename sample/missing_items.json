@@ -9,13 +9,13 @@
             "type": "text",
             "required": true
 	    "controlled.options": {
-            "name": "locations",
-            "wsapiPath": "locations",
-            "sortSpec": "name",
-            "limit": 3000,
-	    "resultPath": "locations",
-            "queryField": "id",
-            "displaySpec": "{{name}} ({{code}})"
+            	"name": "locations",
+           	"wsapiPath": "locations",
+            	"sortSpec": "name",
+            	"limit": 3000,
+	    	"resultPath": "locations",
+            	"queryField": "id",
+            	"displaySpec": "{{name}} ({{code}})"
         }
 	}
     ]
