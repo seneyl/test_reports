@@ -8,8 +8,5 @@
             "displayName": "FOLIO location name",
             "type": "text",
             "required": true
-
-
         }
-
 }
