@@ -17,5 +17,5 @@
             "queryField": "id",
             "displaySpec": "{{name}} ({{code}})"
         }
-    ]
+	}
 }
