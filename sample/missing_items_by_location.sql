@@ -1,8 +1,8 @@
 SQL
---metadb:function missing_items
-drop function if exists missing_items;
+--metadb:function missing_items_by_location
+drop function if exists missing_items_by_location;
 
-create function missing_items()
+create function missing_items_by_location()
 returns table(
 item_status text,
 item_location text,
