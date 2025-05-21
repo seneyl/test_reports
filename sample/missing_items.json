@@ -1,13 +1,13 @@
 {
     "displayName": "Missing Items",
-    "description": "Generates a list of books with the item status 'missing' with MS1 OR MS2 tags across all library locations.",
+    "description": "Generates a list of books with the item status 'missing'.",
     "instructions": "Select location and click Submit button to run current report.",
     "parameters": [
 	{ 
             "name": "item_location",
             "displayName": "FOLIO location name",
             "type": "text",
-            "required": true
+            "required": false
 	    "controlled.fetchOptions": {
             	"name": "locations",
            	"wsapiPath": "locations",
