@@ -2,8 +2,7 @@ SQL
 --metadb:function missing_items_by_location
 drop function if exists missing_items_by_location;
 
-create function missing_items_by_location()
-(
+create function missing_items_by_location(
 	/* Enter a FOLIO item locations */
 	item_location text)
 RETURNS TABLE(
