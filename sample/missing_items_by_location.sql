@@ -3,7 +3,10 @@ SQL
 drop function if exists missing_items_by_location;
 
 create function missing_items_by_location()
-returns table(
+(
+	/* Enter a FOLIO item locations */
+	item_location text)
+RETURNS TABLE(
 item_status text,
 item_location DEFAULT NULL,
 item_barcode text,
