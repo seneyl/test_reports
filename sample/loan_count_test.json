@@ -1,0 +1,19 @@
+{
+    "displayName": "Loan Count",
+    "description": "Created by Kurt to exercise mod-ldp's reporting facility",
+    "instructions": "Choose a start and end date for the user-creation period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Start date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "End date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
