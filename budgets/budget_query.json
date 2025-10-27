@@ -4,7 +4,7 @@
     "instructions": "Chose a fiscal year to generate a report",
     "parameters": [
         {
-            "name": "fy_id",
+            "name": "fy_code",
             "displayName": "Fiscal Year code (e.g. FY2023)",
             "type": "text",
             "required": true
