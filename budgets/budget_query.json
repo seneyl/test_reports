@@ -8,6 +8,7 @@
             "displayName": "Fiscal Year code (e.g. FY2023)",
             "type": "text",
             "required": true
+            "limit": 1000
         }
     ]
 }
