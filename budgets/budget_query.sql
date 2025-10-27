@@ -29,7 +29,7 @@ CREATE FUNCTION budget_query (fy_id text)
                 WHERE
                     fyt.code = fy_code) AS fy_id
 ),
-encumbrance_summary AS (
+with encumbrance_summary AS (
     SELECT
         ftt.from_fund_id AS fid,
         sum(ftt.amount) AS e_encumbered
