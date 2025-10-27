@@ -7,7 +7,7 @@
 --
 DROP FUNCTION IF EXISTS budget_query;
 
-CREATE FUNCTION budget_query (fy_id text)
+CREATE FUNCTION budget_query (fy_code text)
     RETURNS TABLE (
         name text,
         bs_awaiting_payment numeric,
