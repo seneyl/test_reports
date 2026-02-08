@@ -1,0 +1,6 @@
+{
+    "displayName": "Periodical Holdings Statements",
+    "description": "This report combines all of the individual holdings statements in a holdings record and displays them in a single entry by holdings hrid"
+    "instructions": "This report will pull all holdings statements in the system and only needs to be run",
+    "parameters": []
+}
