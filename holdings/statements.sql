@@ -4,10 +4,10 @@ DROP FUNCTION IF EXISTS holdings_statements;
 
 CREATE FUNCTION holdings_statements()
 RETURNS TABLE(
-  instance_hrid as hrid
-  holdings_hrid as hrid
-  title as text
-  holdings_statement as text
+  instance_hrid hrid
+  holdings_hrid hrid
+  title text
+  holdings_statement text
   )
 AS $$
 select 
