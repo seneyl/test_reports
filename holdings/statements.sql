@@ -4,8 +4,8 @@ DROP FUNCTION IF EXISTS holdings_statements;
 
 CREATE FUNCTION holdings_statements()
 RETURNS TABLE(
-  instance_hrid hrid
-  holdings_hrid hrid
+  instance_hrid text
+  holdings_hrid text
   title text
   holdings_statement text
   )
