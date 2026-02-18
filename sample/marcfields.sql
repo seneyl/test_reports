@@ -1,0 +1,20 @@
+--metadb:function marc_fields
+
+DROP FUNCTION IF EXISTS marc_fields
+
+CREATE FUNCTION marc_fields()
+RETURNS TABLE(
+instance_id uuid,
+field varchar,
+content varchar
+)
+AS $$
+select
+mt.instance_id,
+mt.field,
+mt.content
+from folio_source_record.marc__t mt
+$$
+LANGUAGE SQL
+STABLE
+PARALLEL SAFE;
