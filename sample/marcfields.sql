@@ -1,6 +1,6 @@
 --metadb:function marc_fields
 
-DROP FUNCTION IF EXISTS marc_fields
+DROP FUNCTION IF EXISTS marc_fields;
 
 CREATE FUNCTION marc_fields()
 RETURNS TABLE(
