@@ -1,4 +1,4 @@
---metadb:function visiting_researchers
+--metadb:function circulation_by_title
 
 DROP FUNCTION IF EXISTS circulation_by_title;
 
