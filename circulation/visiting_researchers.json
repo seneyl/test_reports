@@ -1,0 +1,19 @@
+{
+    "displayName": "Visiting Researchers Circulation",
+    "description": "This report will pull a list of titles and circulation dates for users in the patron group Visiting Researchers",
+    "instructions": "Enter the date range you would like to query and click submit",
+    "parameters": [
+       {
+            "name": "start_date",
+            "displayName": "Earliest loan date to return",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest loan date to return",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
