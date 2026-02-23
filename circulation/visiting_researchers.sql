@@ -1,4 +1,4 @@
---ldp:function visiting_researchers
+--metadb:function visiting_researchers
 
 DROP FUNCTION IF EXISTS visiting_researchers
 
@@ -10,7 +10,6 @@ RETURNS TABLE(
     li.loan_date timestamptz
 )
 AS $$
-
 select 
 it.title, 
 li.loan_date
@@ -19,7 +18,7 @@ left join folio_inventory.holdings_record__t hrt on li.holdings_record_id = hrt.
 left join folio_inventory.instance__t it on hrt.instance_id::uuid = it.id
 where start_date <= loan_date::date AND loan_date::date < end_date
 and li.patron_group_name = 'VisitingResearchers’
-  $
+$$
 LANGUAGE SQL
 STABLE
 PARALLEL SAFE;
