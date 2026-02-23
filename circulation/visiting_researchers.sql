@@ -6,8 +6,8 @@ CREATE FUNCTION visiting_researchers(
     start_date date DEFAULT '2000-01-01',
     end_date date DEFAULT '2050-01-01')
 RETURNS TABLE(
-    it.title text,
-    li.loan_date timestamptz
+    title text,
+    loan_date timestamptz
 )
 AS $$
 select 
