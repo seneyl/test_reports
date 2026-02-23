@@ -16,7 +16,7 @@ li.loan_date
 from folio_derived.loans_items li
 left join folio_inventory.holdings_record__t hrt on li.holdings_record_id = hrt.id
 left join folio_inventory.instance__t it on hrt.instance_id::uuid = it.id
-where start_date <= loan_date::date AND loan_date::date < end_date
+where (start_date <= loan_date::date AND loan_date::date < end_date)
 and li.patron_group_name = 'VisitingResearchers’
 $$
 LANGUAGE SQL
