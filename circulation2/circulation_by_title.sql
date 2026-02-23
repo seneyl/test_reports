@@ -1,8 +1,8 @@
 --metadb:function visiting_researchers
 
-DROP FUNCTION IF EXISTS visiting_researchers;
+DROP FUNCTION IF EXISTS circulation_by_title;
 
-CREATE FUNCTION visiting_researchers(
+CREATE FUNCTION circulation_by_title(
     start_date date DEFAULT '2000-01-01',
     end_date date DEFAULT '2050-01-01')
 RETURNS TABLE(
