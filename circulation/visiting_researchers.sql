@@ -1,6 +1,6 @@
 --metadb:function visiting_researchers
 
-DROP FUNCTION IF EXISTS visiting_researchers
+DROP FUNCTION IF EXISTS visiting_researchers;
 
 CREATE FUNCTION visiting_researchers(
     start_date date DEFAULT '2000-01-01',
