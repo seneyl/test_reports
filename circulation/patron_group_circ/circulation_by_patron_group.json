@@ -1,0 +1,19 @@
+{
+    "displayName": "Circulation by title",
+    "description": "This report will pull a list of titles and circulation dates for the specified date range.",
+    "instructions": "Enter the date range you would like to query and click submit. Searches can be run from the creation of the system by not including a date range.",
+    "parameters": [
+       {
+            "name": "start_date",
+            "displayName": "Earliest loan date to return",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest loan date to return",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
