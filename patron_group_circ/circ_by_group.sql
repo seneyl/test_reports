@@ -4,7 +4,7 @@ DROP FUNCTION IF EXISTS circ_by_group;
 
 CREATE FUNCTION circ_by_group(
     start_date date DEFAULT '2000-01-01',
-    end_date date DEFAULT '2050-01-01'
+    end_date date DEFAULT '2050-01-01',
     patron_group_search text default ''
   )
 RETURNS TABLE(
