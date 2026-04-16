@@ -1,0 +1,25 @@
+{
+    "displayName": "Circulation by Patron Group",
+    "description": "This report will pull a list of titles and circulation dates for users in the patron group Visiting Researchers",
+    "instructions": "Enter the date range and patron group you would like to query and click submit. Any or all of these fields can be left blank.",
+    "parameters": [
+       {
+            "name": "start_date",
+            "displayName": "Earliest loan date to return",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest loan date to return",
+            "type": "date",
+            "required": false
+        }
+        {
+            "name": "patron_group_search",
+            "displayName": "Search Patron Group",
+            "type": "text",
+            "required": false
+        }
+    ]
+}
