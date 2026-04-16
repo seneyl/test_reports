@@ -24,6 +24,9 @@ left join folio_inventory.holdings_record__t hrt on li.holdings_record_id = hrt.
 left join folio_inventory.instance__t it on hrt.instance_id::uuid = it.id
 where (start_date <= loan_date::date AND loan_date::date < end_date)
 and ((li.patron_group_name = patron_group_search) OR (patron_group_search = ''))
+Group by
+li.patron_group_name,
+li.barcode
 $$
 LANGUAGE SQL
 STABLE
