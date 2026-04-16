@@ -14,7 +14,7 @@
             "displayName": "Latest loan date to return",
             "type": "date",
             "required": false
-        }
+        },
         {
             "name": "patron_group_search",
             "displayName": "Search Patron Group",
