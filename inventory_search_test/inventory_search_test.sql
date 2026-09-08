@@ -34,8 +34,6 @@ RETURNS TABLE(
     "Created Date" TEXT,
     "Fund" TEXT,
     "Inventory Date" TEXT,
-    "PO Number" TEXT,
-    "Invoice" TEXT,
     "Ownership" TEXT,
     "Price" TEXT,
     "Public Notes" TEXT,
